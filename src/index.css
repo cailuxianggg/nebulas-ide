@@ -1,0 +1,68 @@
+@import '~antd/dist/antd.css';
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+
+
+.console-footer{
+  position:absolute;
+  bottom:0px;
+  height:100px;
+  left:0px;
+  right:0px;
+  padding:4px;
+  background: #424242;
+  overflow: auto;
+}
+.button-test button {
+  margin: 0 20px
+}
+.console-footer span{
+  word-wrap: break-word;
+  font-size: 12px
+}
+.code-area{
+  position:absolute;
+  top:64px;
+  left:0px;
+  bottom:0px;
+  right:300px;
+}
+.code-controller{
+  position: absolute;
+  right: 0px;
+  top: 64px;
+  bottom:0px;
+  width: 300px;
+  background: #fff;
+}
+.ant-layout-header{
+  background: #5677fc;
+}
+.run-button{
+  line-height:32px;
+  cursor:pointer;
+}
+
+.form-left{
+  line-height: 32px;
+}
+.form-right{
+  text-align: left;
+}
+.form-row{
+  padding: 10px 0px;
+}
+.right-menu{
+  float: right;
+}
+.right-menu a{
+  display: inline-block;
+  color: #fff;
+  font-size: 20px;
+}
+.run-button:hover{
+  color:#c0c0c0
+}
