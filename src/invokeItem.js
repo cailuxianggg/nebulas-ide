@@ -4,7 +4,7 @@ import { Input, Icon} from 'antd';
 class InvokeItem extends React.Component{
   handleChange = (value,key) => {
     const obj = {};
-    obj[key] = value
+    obj[key] = value;
     this.setState({
       ...obj
     })
@@ -14,13 +14,12 @@ class InvokeItem extends React.Component{
   }
   handleRun = () => {
     const {name,args} = this.props;
-    const { data } = this.state;
     const argDatas =  args.map(item => this.state[item] ? this.state[item] : "")
     this.props.handleRun(name,argDatas);
   }
   render(){
     const {name,args} = this.props;
-    if(name == "init" || name.substring(0,1) == "_"){
+    if(name === "init" || name.substring(0,1) === "_"){
       return null
     }
     return <div style={{lineHeight:'32px',padding:'4px 10px'}}>

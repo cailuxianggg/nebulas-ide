@@ -7,14 +7,14 @@ export const parseContract = (code,callback) => {
   console.log(ast);
   estraverse.traverse(ast, {
     enter: function (node) {
-      if(node.left && node.left.object && node.left.object.name == "module"){
-        if(node.left.property && node.left.property.name == "exports"){
+      if(node.left && node.left.object && node.left.object.name === "module"){
+        if(node.left.property && node.left.property.name === "exports"){
           const right = node.right.name;
           console.log(right);
           estraverse.traverse(ast, {
             enter: function (n) {
-              if(n.type == "AssignmentExpression"){
-                if(n.left && n.left.object && n.left.object.name == right){
+              if(n.type === "AssignmentExpression"){
+                if(n.left && n.left.object && n.left.object.name === right){
                   const list = n.right.properties;
                   const info = contractMethod(list);
                   callback(info)

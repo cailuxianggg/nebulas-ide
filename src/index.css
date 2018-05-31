@@ -1,4 +1,5 @@
 @import '~antd/dist/antd.css';
+@import '/iconfont/iconfont.css';
 body {
   margin: 0;
   padding: 0;
@@ -13,8 +14,10 @@ body {
   left:0px;
   right:0px;
   padding:4px;
-  background: #424242;
+  /*background: #424242;*/
   overflow: auto;
+  background: #fff;
+  border-top: 2px solid #e9e9e9
 }
 .button-test button {
   margin: 0 20px
@@ -37,20 +40,41 @@ body {
   bottom:0px;
   width: 300px;
   background: #fff;
+  border-left: 1px solid #e9e9e9;
+}
+.ant-layout{
+  background:#fff;
+}
+.iconfont{
+  vertical-align: middle;
+  font-size:20px;
 }
 .ant-layout-header{
-  background: #5677fc;
+  background: #fff;
+  border-bottom: 1px solid #e9e9e9;
 }
 .run-button{
   line-height:32px;
   cursor:pointer;
 }
+.ant-form-item{
+  margin-bottom: 0px
+}
 
 .form-left{
-  line-height: 32px;
+  line-height: 24px;
+  font-size: 12px;
 }
 .form-right{
   text-align: left;
+}
+.test-form{
+  position: absolute;
+  overflow: auto;
+  padding-bottom: 10px;
+  bottom: 0px;
+  top: 44px;
+  width: 100%;
 }
 .form-row{
   padding: 10px 0px;
@@ -58,11 +82,71 @@ body {
 .right-menu{
   float: right;
 }
-.right-menu a{
+.cm-s-coda div.CodeMirror-cursor {
+    border-left: 2px solid hsla(223,4%,62%,.37) !important;
+}
+.cm-s-coda .CodeMirror-gutters{
+  -webkit-box-shadow:none !important;
+  box-shadow: none !important;
+}
+.cm-s-coda .CodeMirror-activeline-background {
+  background: #e8f2ff;
+}
+.cm-s-coda .CodeMirror-focused .CodeMirror-activeline-background {
+  background: #e8f2ff !important;
+}
+.right-menu > a{
+  margin:0 8px;
+}
+
+.right-menu  a{
   display: inline-block;
-  color: #fff;
-  font-size: 20px;
+  color: #666;
+  font-size: 16px;
+  text-decoration:none;
+}
+.my-contract{
+  margin-right: 5px;
+  font-weight: 400;
+  font-size: 14px;
+}
+.my-date{
+  margin: 0 5px;
+  font-size:12px;
 }
 .run-button:hover{
   color:#c0c0c0
+}
+.index-title{
+  font-size: 26px;
+}
+.index-title-parent{
+  text-align: center;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  padding: 10px 0 70px;
+  line-height: 3;
+  color: #888;
+  letter-spacing: .2em;
+  color:#888;
+  font-size: 14px;
+}
+hr{
+  background: #e9e9e9;
+  height: 1px;
+  border: 0;
+  margin: 0 0 40px;
+}
+.contrat-board{
+  display: flex;
+  width:100%;
+  min-height: 100px;
+}
+.board-new{
+  flex-grow: 1;
+}
+.board-love{
+  flex-grow: 1;
+
 }

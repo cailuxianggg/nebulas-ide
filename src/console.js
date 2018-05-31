@@ -1,8 +1,7 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
 
 const Info = ({msg})=>{
-  return <div style={{color:'#fff'}}><span style={{paddingRight:5}}>INFO:</span><span >{msg}</span></div>
+  return <div ><span style={{paddingRight:5}}>INFO:</span><span >{msg}</span></div>
 }
 const Error = ({msg})=>{
   return <div style={{color:'red'}}><span style={{paddingRight:5}}>ERROR:</span><span >{msg}</span></div>
@@ -18,12 +17,12 @@ class Console extends React.Component{
   }
   info = (m) => {
     const {msg} = this.state;
-    msg.push(<Info msg={m} />)
+    msg.push(<Info key={new Date().getTime()} msg={m} />)
     this.setState({msg})
   }
   error = (m) => {
     const {msg} = this.state;
-    msg.push(<Error msg={m} />)
+    msg.push(<Error key={new Date().getTime()} msg={m} />)
     this.setState({msg})
   }
   render(){
